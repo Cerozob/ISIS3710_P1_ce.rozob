@@ -49,14 +49,23 @@ p {
 	left: 448px;
 }
 
+input[type="text"] {
+	border: 0px;
+	outline: none;
+	font-family: Lato;
+	font-size: 24px;
+	line-height: 29px;
+	padding-left: 9px;
+	color: #000000;
+}
+
 input::placeholder {
 	font-family: Lato;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 24px;
+	height: 30px;
 	line-height: 29px;
-	padding-left: 9px;
-	padding-top: 9px;
 	color: #d4c9c9;
 }
 
@@ -95,6 +104,7 @@ input::placeholder {
 	border: 0;
 	padding: 0;
 	margin: 0;
+	background-color: #00000000;
 }
 
 #catalog {
@@ -117,7 +127,7 @@ input::placeholder {
 	border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.productpicturecontainer {
+.productpicturebutton {
 	position: absolute;
 	width: 180px;
 	height: 180px;
@@ -126,10 +136,15 @@ input::placeholder {
 	justify-content: center;
 	left: 44px;
 	top: 30px;
+	padding: 0;
+	border: none;
+	background: none;
+	border-radius: 15px;
 }
 
 .productpicture {
 	height: 100%;
+	border-radius: 15px;
 }
 .pricetext {
 	position: absolute;
@@ -164,4 +179,149 @@ input::placeholder {
 	font-size: 14px;
 	/* tal vez no sea necesario*/
 	line-height: 16.8px;
+}
+
+.notfoundtext {
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 100px;
+	height: 331px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	color: #000000;
+}
+.searchagaintext {
+	display: flex;
+	height: 331px;
+	flex-direction: column;
+	text-align: center;
+	font-family: "Lato";
+	font-style: italic;
+	font-weight: normal;
+	font-size: 24px;
+
+	color: #000000;
+}
+
+.detailcontainer {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: none;
+	margin: none;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	height: 852px;
+}
+
+.detailpicturecontainer {
+	position: absolute;
+	width: 563px;
+	height: 520px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 50px;
+	top: 54px;
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+.detailpicture {
+	/* igual al product picture*/
+}
+
+.breadcrumb {
+	position: absolute;
+	left: 99;
+	top: 114;
+	width: 520;
+	height: 32px;
+	font-size: 18px;
+	/* tal vez no sea necesario*/
+	line-height: 21.6px;
+	text-align: justify;
+	color: rgba(0, 0, 0, 0.67);
+}
+
+.condition {
+	position: absolute;
+	left: 878px;
+	top: 54px;
+	width: 312px;
+	height: 35px;
+	font-size: 14px;
+	/* tal vez no sea necesario*/
+	line-height: 16.8px;
+}
+
+.descripciondelproducto {
+	position: absolute;
+	left: 50;
+	top: 597px;
+	width: 312px;
+	height: 31px;
+	font-size: 28px;
+	/* tal vez no sea necesario*/
+	line-height: 33.6px;
+}
+
+.description {
+	position: absolute;
+	text-align: justify;
+	left: 50;
+	top: 651px;
+	width: 828px;
+	height: 170px;
+	font-size: 14px;
+	/* tal vez no sea necesario*/
+	line-height: 16.8px;
+	color: #b8acac;
+}
+
+.nametextdetail {
+	position: absolute;
+	left: 878;
+	top: 120;
+	width: 312;
+	height: 31px;
+	font-size: 24px;
+	/* tal vez no sea necesario*/
+	line-height: 28.8px;
+}
+
+.pricetextdetail {
+	position: absolute;
+	left: 878px;
+	top: 177px;
+	width: 312px;
+	height: 33px;
+	font-size: 24px;
+	/* tal vez no sea necesario*/
+	line-height: 28.8px;
+}
+
+.detailbutton {
+	position: absolute;
+	left: 878px;
+	border-radius: 20px;
+	display: flex;
+	align-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+#buybutton {
+	top: 258px;
+	background-color: #c968cb;
+}
+
+#addtofavoritesbutton {
+	top: 327px;
+	background-color: #8c86d7;
 }

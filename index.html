@@ -16,20 +16,18 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav>
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a href="#">
                 <img id="logo" src="assets/brand.png" alt="Marketplace Logo">
             </a>
-            <a class="navbar-brand"></a>
-
         </div>
-        <form id="search">
-            <input id="searchbar" type="search" placeholder="Filtrar por categoría" aria-label="Search">
-            <button id="searchbutton" type="submit" class="btn"><img id="searchbuttonicon"
-                    src="assets/search_icon@2x_1.png" alt="Search Icon"></button>
-        </form>
-        <button id="wishlistbutton" type="wishlist" class="btn"><img id="wishlisticon" src="assets/wish_list_icon.png"
+        <div id="search">
+            <input id="searchbar" type="text" placeholder="Filtrar por categoría" aria-label="Search">
+            <button id="searchbutton"><img id="searchbuttonicon" src="assets/search_icon@2x_1.png"
+                    alt="Search Icon"></button>
+        </div>
+        <button id="wishlistbutton"><img id="wishlisticon" src="assets/wish_list_icon.png"
                 alt="Add to favorites Icon"></button>
     </nav>
     <div id="catalog"></div>
