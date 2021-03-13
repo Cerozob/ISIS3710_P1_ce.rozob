@@ -1,0 +1,167 @@
+body {
+	width: 1440px;
+	height: 1024px;
+	font-family: "Lato", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #ece9e9 !important; /*culpa de bootstrap*/
+}
+nav {
+	position: absolute;
+	width: 1440px;
+	height: 80px;
+	left: 0px;
+	top: 0px; /* a veces es 3 a veces 2 a veces -1*/
+
+	background: linear-gradient(
+		270deg,
+		#745ece 0%,
+		rgba(105, 72, 237, 0.41) 47.4%,
+		#5e63c8 82.29%
+	);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+p {
+	font-family: "Lato";
+	font-weight: 400;
+	height: 35px;
+	color: #000000;
+	text-align: left;
+	/* TODO: verificar*/
+	vertical-align: top;
+}
+
+#logo {
+	position: absolute;
+	width: 100px;
+	height: 60px;
+	left: 100px;
+	top: 10px;
+}
+
+#search {
+	position: absolute;
+	width: 892px;
+	height: 47px;
+	top: 20px;
+	left: 448px;
+}
+
+input::placeholder {
+	font-family: Lato;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+	padding-left: 9px;
+	padding-top: 9px;
+	color: #d4c9c9;
+}
+
+#searchbar {
+	position: absolute;
+	width: 892px;
+	height: 47px;
+}
+
+#searchbutton {
+	position: absolute;
+	height: 47px;
+	width: 56px;
+	right: 0px;
+	background-color: #e5e5e5;
+	outline: 0;
+	border-radius: 0;
+	border: 0;
+}
+
+#searchbuttonicon {
+	position: absolute;
+	left: 10px;
+	top: 5px;
+	height: 36px;
+	width: 36px;
+}
+
+#wishlistbutton {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 44px;
+	height: 40px;
+	border-radius: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+#catalog {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 159px;
+	left: 100px;
+	width: 1240px;
+	background-color: #ffffff;
+}
+
+.catalogitem {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	height: 221px;
+	background: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.productpicturecontainer {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 44px;
+	top: 30px;
+}
+
+.productpicture {
+	height: 100%;
+}
+.pricetext {
+	position: absolute;
+	left: 348px;
+	top: 30px;
+	width: 150px;
+	font-size: 24px;
+	/* tal vez no sea necesario*/
+	line-height: 28.8px;
+}
+.freeshippingicon {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 498px;
+	top: 34px;
+}
+.nametext {
+	position: absolute;
+	left: 348px;
+	top: 112px;
+	width: 500px;
+	font-size: 18px;
+	/* tal vez no sea necesario*/
+	line-height: 21.6px;
+}
+.locationtext {
+	position: absolute;
+	left: 1011px;
+	top: 30px;
+	width: 150px;
+	font-size: 14px;
+	/* tal vez no sea necesario*/
+	line-height: 16.8px;
+}
