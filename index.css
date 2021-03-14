@@ -75,15 +75,20 @@ input::placeholder {
 	height: 47px;
 }
 
+button {
+	outline: 0;
+	border-radius: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
 #searchbutton {
 	position: absolute;
 	height: 47px;
 	width: 56px;
 	right: 0px;
 	background-color: #e5e5e5;
-	outline: 0;
-	border-radius: 0;
-	border: 0;
 }
 
 #searchbuttonicon {
@@ -100,10 +105,6 @@ input::placeholder {
 	right: 20px;
 	width: 44px;
 	height: 40px;
-	border-radius: 0;
-	border: 0;
-	padding: 0;
-	margin: 0;
 	background-color: #00000000;
 }
 
@@ -136,9 +137,18 @@ input::placeholder {
 	justify-content: center;
 	left: 44px;
 	top: 30px;
-	padding: 0;
-	border: none;
-	background: none;
+	border-radius: 15px;
+}
+
+.favouritepicbutton {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 100px;
+	top: 20px;
 	border-radius: 15px;
 }
 
@@ -152,7 +162,7 @@ input::placeholder {
 	top: 30px;
 	width: 150px;
 	font-size: 24px;
-	/* tal vez no sea necesario*/
+
 	line-height: 28.8px;
 }
 .freeshippingicon {
@@ -168,7 +178,6 @@ input::placeholder {
 	top: 112px;
 	width: 500px;
 	font-size: 18px;
-	/* tal vez no sea necesario*/
 	line-height: 21.6px;
 }
 .locationtext {
@@ -177,7 +186,7 @@ input::placeholder {
 	top: 30px;
 	width: 150px;
 	font-size: 14px;
-	/* tal vez no sea necesario*/
+
 	line-height: 16.8px;
 }
 
@@ -209,13 +218,16 @@ input::placeholder {
 }
 
 .detailcontainer {
-	position: absolute;
+	display: flex;
+	position: relative;
 	left: 0px;
 	top: 0px;
-	padding: none;
-	margin: none;
+	padding: 0px;
+	margin: 0px;
 	border: 1px solid rgba(0, 0, 0, 0.15);
-	height: 852px;
+	width: 1240px;
+	min-height: 852px;
+	background-color: #ffffff;
 }
 
 .detailpicturecontainer {
@@ -227,23 +239,27 @@ input::placeholder {
 	justify-content: center;
 	left: 50px;
 	top: 54px;
-	padding: 0;
+	padding: 0px;
 	border: none;
 	background: none;
+	background-color: #ffffff;
+	border-radius: 15px;
 }
 
 .detailpicture {
-	/* igual al product picture*/
+	height: inherit;
+	border-radius: 15px;
 }
 
 .breadcrumb {
 	position: absolute;
-	left: 99;
-	top: 114;
-	width: 520;
+	left: 99px;
+	top: 114px;
+	/* en figma es 520 pero queda de varias líneas y no creo que eso sea esperado */
+	width: 1240px;
 	height: 32px;
 	font-size: 18px;
-	/* tal vez no sea necesario*/
+
 	line-height: 21.6px;
 	text-align: justify;
 	color: rgba(0, 0, 0, 0.67);
@@ -256,42 +272,52 @@ input::placeholder {
 	width: 312px;
 	height: 35px;
 	font-size: 14px;
-	/* tal vez no sea necesario*/
+
 	line-height: 16.8px;
 }
 
-.descripciondelproducto {
+.descriptiontitle {
 	position: absolute;
-	left: 50;
+	left: 50px;
 	top: 597px;
 	width: 312px;
 	height: 31px;
 	font-size: 28px;
-	/* tal vez no sea necesario*/
+
 	line-height: 33.6px;
 }
 
-.description {
-	position: absolute;
-	text-align: justify;
-	left: 50;
+.descriptionwrapper {
+	display: block;
+	position: relative;
 	top: 651px;
+	width: 1240px;
+	height: max-content;
+	margin: 1px solid rgba(0, 0, 0, 0.15);
+	border-top: 0px;
+	background-color: #ffffff;
+	margin-bottom: 31px;
+}
+
+.description {
+	text-align: justify;
+
+	margin-left: 50px;
 	width: 828px;
-	height: 170px;
+	height: max-content;
 	font-size: 14px;
-	/* tal vez no sea necesario*/
-	line-height: 16.8px;
 	color: #b8acac;
+	background-color: #ffffff;
 }
 
 .nametextdetail {
 	position: absolute;
-	left: 878;
-	top: 120;
-	width: 312;
+	left: 878px;
+	top: 120px;
+	width: 312px;
 	height: 31px;
 	font-size: 24px;
-	/* tal vez no sea necesario*/
+
 	line-height: 28.8px;
 }
 
@@ -302,26 +328,132 @@ input::placeholder {
 	width: 312px;
 	height: 33px;
 	font-size: 24px;
-	/* tal vez no sea necesario*/
+
 	line-height: 28.8px;
 }
 
 .detailbutton {
+	width: 312px;
+	height: 51px;
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28.8px;
+	color: #ffffff;
 	position: absolute;
 	left: 878px;
 	border-radius: 20px;
-	display: flex;
-	align-content: center;
-	text-align: center;
-	align-items: center;
 }
 
+.favouritebutton {
+	width: 200px;
+	height: 51px;
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28.8px;
+	color: #ffffff;
+	position: absolute;
+	background: #c968cb;
+	left: 984px;
+	top: 67px;
+	border-radius: 20px;
+}
 #buybutton {
 	top: 258px;
 	background-color: #c968cb;
 }
 
-#addtofavoritesbutton {
+#addtofavouritesbutton {
 	top: 327px;
 	background-color: #8c86d7;
+}
+
+#boughtdialog {
+	position: absolute;
+	width: 578px;
+	height: 364px;
+	left: 486px;
+	top: 359px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #ffffff;
+	border: 1px solid #c6c2c2;
+}
+
+#dialogdivider {
+	position: absolute;
+	width: 556px;
+	height: 0px;
+	border: 1px solid #d5c9c9;
+	background-color: #d5c9c9;
+	bottom: 69px;
+}
+
+#dismissbutton {
+	position: absolute;
+	width: 145px;
+	background-color: #8c86d7;
+	bottom: 9px;
+	left: 420px;
+}
+
+.dialogproducttitle {
+	position: relative;
+	top: 114px;
+	display: block;
+
+	text-align: center;
+	width: 312px;
+	height: max-content;
+	line-height: 28.8px;
+}
+
+.anadido {
+	display: block;
+	position: absolute;
+	padding-top: 31px;
+	bottom: 137px;
+	width: 312px;
+	height: 51px;
+	font-weight: 700;
+	line-height: 28.8px;
+	text-align: center;
+}
+
+.checkboxbutton {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 92px;
+	left: 40px;
+	background-color: #c4c4c4;
+	border: 0px;
+	outline: 0px;
+	border-radius: 0px;
+}
+
+#firstrow {
+	height: 89px;
+}
+
+#checkboxfirstrow {
+	top: 30px;
+}
+
+#eliminatedisabled {
+	top: 15px;
+	left: 100px;
+	cursor: not-allowed;
+	background-color: #ece9e9;
+}
+
+#eliminateenabled {
+	top: 15px;
+	left: 100px;
+	cursor: pointer;
+	background-color: #e1677d;
 }
