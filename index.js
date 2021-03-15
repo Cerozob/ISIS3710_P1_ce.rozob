@@ -309,6 +309,9 @@ function displayProductDetail(productid /* product id */) {
 	let descriptionText = document.createElement("p");
 	descriptionText.innerText = product.description;
 	descriptionText.className = "description";
+	/* price container for text overflow */
+	let priceButtonsContainer = document.createElement("div");
+	priceButtonsContainer.className = "pricebuttonscontainer";
 	/* Price tag*/
 	let itemPrice = document.createElement("p");
 	let price = product.price.amount;
@@ -361,11 +364,12 @@ function displayProductDetail(productid /* product id */) {
 	detailContainer.appendChild(pictureContainer);
 	detailContainer.appendChild(descriptionTitle);
 	detailContainer.appendChild(descriptionContainer);
-	detailContainer.appendChild(itemPrice);
-	detailContainer.appendChild(itemName);
-	detailContainer.appendChild(usedcondition);
-	detailContainer.appendChild(buyButton);
-	detailContainer.appendChild(favsButton);
+	priceButtonsContainer.appendChild(usedcondition);
+	priceButtonsContainer.appendChild(itemName);
+	priceButtonsContainer.appendChild(itemPrice);
+	priceButtonsContainer.appendChild(buyButton);
+	priceButtonsContainer.appendChild(favsButton);
+	detailContainer.appendChild(priceButtonsContainer);
 	catalog.appendChild(detailContainer);
 }
 

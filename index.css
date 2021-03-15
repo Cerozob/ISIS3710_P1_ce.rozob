@@ -266,9 +266,8 @@ button {
 }
 
 .condition {
-	position: absolute;
-	left: 878px;
-	top: 54px;
+	margin-top: 54px;
+	margin-bottom: 31px;
 	width: 312px;
 	height: 35px;
 	font-size: 14px;
@@ -311,25 +310,19 @@ button {
 }
 
 .nametextdetail {
-	position: absolute;
-	left: 878px;
-	top: 120px;
 	width: 312px;
-	height: 31px;
+	height: max-content;
 	font-size: 24px;
-
+	margin-bottom: 26px;
+	display: block;
 	line-height: 28.8px;
 }
 
 .pricetextdetail {
-	position: absolute;
-	left: 878px;
-	top: 177px;
-	width: 312px;
 	height: 33px;
 	font-size: 24px;
-
 	line-height: 28.8px;
+	margin-bottom: 48px;
 }
 
 .detailbutton {
@@ -341,9 +334,9 @@ button {
 	font-size: 24px;
 	line-height: 28.8px;
 	color: #ffffff;
-	position: absolute;
-	left: 878px;
+	left: 0px;
 	border-radius: 20px;
+	margin-bottom: 18px;
 }
 
 .favouritebutton {
@@ -399,6 +392,7 @@ button {
 	background-color: #8c86d7;
 	bottom: 9px;
 	left: 420px;
+	margin: 0px;
 }
 
 .dialogproducttitle {
@@ -445,6 +439,7 @@ button {
 }
 
 #eliminatedisabled {
+	position: absolute;
 	top: 15px;
 	left: 100px;
 	cursor: not-allowed;
@@ -452,8 +447,21 @@ button {
 }
 
 #eliminateenabled {
+	position: absolute;
 	top: 15px;
 	left: 100px;
 	cursor: pointer;
 	background-color: #e1677d;
+}
+
+/* detail title overflow */
+.pricebuttonscontainer {
+	position: absolute;
+	top: 0px;
+	left: 878px;
+	height: 828px;
+	width: 362px;
+	background-color: #ffffff;
+	display: flex;
+	flex-direction: column;
 }
